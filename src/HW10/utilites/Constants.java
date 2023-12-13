@@ -1,6 +1,7 @@
 package HW10.utilites;
 
 public class Constants {
+
     private Constants() {
     }
 

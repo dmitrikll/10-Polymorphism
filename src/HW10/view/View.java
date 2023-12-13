@@ -18,10 +18,10 @@ public class View {
     }
 
     public double[] getOption() {
-        System.out.print("Enter the value of the first option: ");
+        System.out.print("Enter value of the first option: ");
         scData.useLocale(Locale.ENGLISH);
         double firstOption = scData.nextDouble();
-        System.out.print("Enter the value of the second option: ");
+        System.out.print("Enter value of the second option: ");
         scData.useLocale(Locale.ENGLISH);
         double secondOption = scData.nextDouble();
         return new double[]{firstOption, secondOption};
