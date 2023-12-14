@@ -1,10 +1,12 @@
 package HW10.model;
 
-public class ModelA extends BaseModel {
+import HW10.utilites.MainConstants;
+
+public class MainModelB extends MainBaseModel {
     double firstOption;
     double secondOption;
 
-    public ModelA(String modelName, double firstOption, double secondOption) {
+    public MainModelB(String modelName, double firstOption, double secondOption) {
         super(modelName);
         this.firstOption = firstOption;
         this.secondOption = secondOption;
@@ -12,6 +14,6 @@ public class ModelA extends BaseModel {
 
     @Override
     public double getResult() {
-        return (firstOption * secondOption);
+        return ((firstOption + secondOption) * MainConstants.RATE);
     }
 }

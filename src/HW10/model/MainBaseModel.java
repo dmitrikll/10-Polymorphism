@@ -1,9 +1,9 @@
 package HW10.model;
 
-public abstract class BaseModel {
+public abstract class MainBaseModel {
     String modelName;
 
-    public BaseModel(String modelName) {
+    public MainBaseModel(String modelName) {
         this.modelName = modelName;
     }
 

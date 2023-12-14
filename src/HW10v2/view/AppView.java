@@ -1,9 +1,9 @@
-package HW10.view;
+package HW10v2.view;
 
 import java.util.Scanner;
 import java.util.Locale;
 
-public class View {
+public class AppView {
 
     private final Scanner scData = new Scanner(System.in);
 
@@ -17,14 +17,16 @@ public class View {
         return scData.nextInt();
     }
 
-    public double[] getOption() {
+    public double getFirstOption() {
         System.out.print("Enter value of the first option: ");
         scData.useLocale(Locale.ENGLISH);
-        double firstOption = scData.nextDouble();
+        return scData.nextDouble();
+    }
+
+    public double getSecondOption() {
         System.out.print("Enter value of the second option: ");
         scData.useLocale(Locale.ENGLISH);
-        double secondOption = scData.nextDouble();
-        return new double[]{firstOption, secondOption};
+        return scData.nextDouble();
     }
 
     public void getOutput(String output) {

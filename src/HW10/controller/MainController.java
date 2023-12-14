@@ -1,15 +1,15 @@
 package HW10.controller;
 
-import HW10.view.View;
-import HW10.model.ModelA;
-import HW10.model.ModelB;
-import HW10.utilites.Rounder;
+import HW10.view.MainView;
+import HW10.model.MainModelA;
+import HW10.model.MainModelB;
+import HW10.utilites.MainRounder;
 
-public class Controller {
+public class MainController {
 
     public static void getCalculate() {
 
-        View view = new View();
+        MainView view = new MainView();
         int modelType = view.getModel();
         double[] option = view.getOption();
         String modelName;
@@ -23,8 +23,8 @@ public class Controller {
                 modelName = "Model # A";
                 firstOption = option[0];
                 secondOption = option[1];
-                ModelA model = new ModelA(modelName, firstOption, secondOption);
-                realisation = Rounder.roundValue(model.getResult());
+                MainModelA model = new MainModelA(modelName, firstOption, secondOption);
+                realisation = MainRounder.roundValue(model.getResult());
                 output = "Device is " + modelName + ";" +
                         "\nResult realisation is: " + realisation + ".";
                 view.getOutput(output);
@@ -34,8 +34,8 @@ public class Controller {
                 modelName = "Model # B";
                 firstOption = option[0];
                 secondOption = option[1];
-                ModelB model = new ModelB(modelName, firstOption, secondOption);
-                realisation = Rounder.roundValue(model.getResult());
+                MainModelB model = new MainModelB(modelName, firstOption, secondOption);
+                realisation = MainRounder.roundValue(model.getResult());
                 output = "Device is " + modelName + ";" +
                         "\nResult realisation is: " + realisation + ".";
                 view.getOutput(output);
